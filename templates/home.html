@@ -1,0 +1,13 @@
+{% comment %}
+<h1>This is home page</h1>
+{% endcomment %} {% if user.is_authenticated %}
+<h1>Welcome, {{user.username}}</h1>
+
+{% else %}
+<h1>Welcome to our website</h1>
+{% endif %} {% if user.is_authenticated %}
+
+<a href="logout">Logout</a>
+{% else %}
+<a href="login">Login or Signup</a>
+{% endif %}
